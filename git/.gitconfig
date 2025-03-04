@@ -1,3 +1,8 @@
+# [core]
+# 	editor = \"C:\\Users\\<username>\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
+# [user]
+# 	name = Robin Pedersen
+# 	email = <email>
 [alias]
 	s = "status --short --branch"
 	st = "status"
@@ -11,13 +16,11 @@
 	rb = "!r() { git rebase -i HEAD~$1; }; r"
 	rc = "rebase --continue"
 	logs = log --oneline --graph --decorate --all
-# [user]
-# 	name = Robin Pedersen
-# 	email = <email>
 [pull]
 	ff = only
 [merge]
 	ff = false
+	conflictstyle = zdiff3
 [color]
 	status = "always"
 	branch = auto
@@ -28,3 +31,21 @@
     pager = true
 [push]
 	autoSetupRemote = true
+	followTags = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[init]
+	defaultBranch = main
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[help]
+	autocorrect = prompt
+[commit]
+	verbose = true
