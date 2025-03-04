@@ -1,0 +1,30 @@
+[alias]
+	s = "status --short --branch"
+	st = "status"
+	br = "branch"
+	co = "checkout"
+	cm = "commit -m"
+	ca = "commit --amend --no-edit"
+	fp = "push --force-with-lease"
+	p = "push"
+	r = "rebase"
+	rb = "!r() { git rebase -i HEAD~$1; }; r"
+	rc = "rebase --continue"
+	logs = log --oneline --graph --decorate --all
+# [user]
+# 	name = Robin Pedersen
+# 	email = <email>
+[pull]
+	ff = only
+[merge]
+	ff = false
+[color]
+	status = "always"
+	branch = auto
+    diff = auto
+    status = auto
+    ui = true
+    interactive = auto
+    pager = true
+[push]
+	autoSetupRemote = true
